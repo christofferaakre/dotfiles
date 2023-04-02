@@ -1,4 +1,7 @@
 -- set python3 path
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 vim.g["python3_host_prog"] = "~/.local/venv/nvim/bin/python3"
 
 -- global variables
@@ -8,6 +11,7 @@ require("sets")
 require("plugins")
 require("colors")
 require("keybindings")
+require("fugitive-config")
 require("harpoon-config")
 require("telescope-config")
 require("toggleterm-config")
