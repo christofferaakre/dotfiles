@@ -1,4 +1,6 @@
-alias aliases="vim ~/bin/dotfiles/fish/conf.d/aliases.fish"
+alias aliases="vim ~/dotfiles/fish/conf.d/aliases.fish"
+
+alias dotfiles="cd ~/dotfiles"
 
 # editor
 alias vim="nvim"
