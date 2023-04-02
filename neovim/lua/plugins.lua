@@ -5,4 +5,5 @@ return require('packer').startup(function(use)
     use {'numToStr/Comment.nvim'}
     use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
     use 'nvim-treesitter/nvim-treesitter-context'
+    use 'unblevable/quick-scope'
 end)
