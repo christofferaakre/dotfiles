@@ -23,11 +23,13 @@ vim.opt.smartindent = true
 -- searching
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
+vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
 -- swap files and buffers
 vim.opt.swapfile = false
 vim.opt.backup = false
+vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
 vim.opt.hidden = true
 
@@ -55,3 +57,6 @@ vim.opt.clipboard = vim.opt.clipboard + "unnamedplus"
 vim.opt.mouse = "a"
 
 vim.g.mapleader = " "
+
+vim.opt.updatetime = 50
+
