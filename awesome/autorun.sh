@@ -5,5 +5,3 @@ xmodmap ~/.Xmodmap
 
 setxkbmap gb
 setxkbmap -option caps:escape
-picom
-# nitrogen --restore

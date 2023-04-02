@@ -525,12 +525,6 @@ awful.rules.rules = {
     { rule_any = {type = { "normal", "dialog" }
       }, properties = { titlebars_enabled = true }
     },
-
-    -- Set Firefox to always map on the tag named "2" on screen 1.
-    -- { rule = { class = "Firefox" },
-    --   properties = { screen = 1, tag = "2" } },
-    -- Program specific rules
-
 }
 -- }}}
 
@@ -600,6 +594,5 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 
 awful.spawn.with_shell("~/.config/awesome/autorun.sh")
 os.execute("redshift -l 60.4143616:5.3182464 &")
-
 
 beautiful.useless_gap = 5
