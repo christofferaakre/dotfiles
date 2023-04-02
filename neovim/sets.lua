@@ -33,15 +33,11 @@ vim.opt.hidden = true
 
 
 -- completion
-vim.opt.completeopt = {"menuone", "noinsert", "noselect"}
+--vim.opt.completeopt = {"menuone", "noinsert", "noselect"}
 
 -- sign/color column
 vim.opt.signcolumn = "yes"
 vim.opt.colorcolumn = "80"
-
--- status bar
-vim.opt.laststatus = 2
-vim.opt.ruler = true
 
 -- folding
 vim.opt.foldmethod = "indent"
@@ -57,9 +53,3 @@ vim.opt.clipboard = vim.opt.clipboard + "unnamedplus"
 
 -- mouse integration
 vim.opt.mouse = "a"
-
---vim.opt.cmdheight = 2
-vim.opt.updatetime = 50
---vim.opt.shortmess = vim.opt.shortmess + "c"
-
-vim.g["rustfmt_autosave"] = 1
