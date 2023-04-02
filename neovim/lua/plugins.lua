@@ -10,4 +10,6 @@ return require('packer').startup(function(use)
     use 'ThePrimeagen/harpoon'
     use {'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }   use 'nvim-telescope/telescope.nvim'
     use {"akinsho/toggleterm.nvim", tag = '*', config = function() require("toggleterm").setup() end}
+    use 'nvim-tree/nvim-tree.lua'
+    use 'nvim-tree/nvim-web-devicons'
 end)

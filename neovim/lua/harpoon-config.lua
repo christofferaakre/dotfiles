@@ -1,6 +1,4 @@
 -- harpoon keybindings
-local map = vim.api.nvim_set_keymap
-
 map('n', '<leader>mf', ':lua require("harpoon.mark").add_file()<CR><CR>', { noremap = true, silent = false })
 map('n', '<leader>mm', ':lua require("harpoon.ui").toggle_quick_menu()<CR><CR>', { noremap = true, silent = false })
 map('n', '<leader>1',':lua require("harpoon.ui").nav_file(1)<CR><CR>', { noremap = true, silent = false })

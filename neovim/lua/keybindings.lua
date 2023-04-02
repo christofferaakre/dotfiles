@@ -1,6 +1,3 @@
-
-local map = vim.api.nvim_set_keymap
-
 -- Easy split navigation
 map('n', '<C-J>', '<C-W>j', { noremap = true, silent = false})
 map('n', '<C-K>', '<C-W>k', { noremap = true, silent = false})
