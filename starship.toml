@@ -22,3 +22,12 @@ disabled = true
 
 [gcloud]
 disabled = true
+
+[azure]
+disabled = true
+
+[aws]
+disabled = true
+
+[kubernetes]
+disabled = true
