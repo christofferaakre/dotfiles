@@ -53,3 +53,5 @@ vim.opt.clipboard = vim.opt.clipboard + "unnamedplus"
 
 -- mouse integration
 vim.opt.mouse = "a"
+
+vim.g.mapleader = " "
