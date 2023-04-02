@@ -1,1 +1,0 @@
-/home/negosaki/.vimrc
