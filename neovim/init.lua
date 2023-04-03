@@ -2,7 +2,7 @@
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
-vim.g["python3_host_prog"] = "~/.local/venv/nvim/bin/python3"
+vim.g["python3_host_prog"] = "c:/Users/caa/.local/venv/nvim/Scripts/python3"
 
 -- global variables
 require("globals")
@@ -19,6 +19,6 @@ require("treesitter")
 require("nvim-tree-config")
 require("lsp")
 require("syntax_highlighting")
-require("comment")
+require("comment-config")
 require('context')
 
