@@ -1,6 +1,7 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
+    use 'wbthomason/packer.nvim'
     use 'gruvbox-community/gruvbox'
     use {'numToStr/Comment.nvim'}
     use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
