@@ -29,7 +29,7 @@ vim.opt.incsearch = true
 -- swap files and buffers
 vim.opt.swapfile = false
 vim.opt.backup = false
-vim.opt.undodir = "$HOME" .. "/.vim/undodir"
+vim.opt.undodir = "C:/Users/caa" .. "/.vim/undodir"
 vim.opt.undofile = true
 vim.opt.hidden = true
 
