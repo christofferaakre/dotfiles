@@ -5,3 +5,5 @@ xmodmap ~/.Xmodmap
 
 setxkbmap gb
 setxkbmap -option caps:escape
+
+CM_OWN_CLIPBOARD=1 clipmenud &

@@ -53,6 +53,3 @@ xinput set-prop "pointer:Razer Razer DeathAdder V2" "libinput Accel Speed" -0.8
 
 #exec awesome
 exec awesome >> ~/.cache/awesome/stdout 2>> ~/.cache/awesome/stderr
-
-
-
