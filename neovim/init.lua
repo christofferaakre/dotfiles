@@ -22,4 +22,5 @@ require("lsp")
 require("syntax_highlighting")
 require("comment")
 require('context')
+require("hex-config")
 

@@ -3,14 +3,16 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
     use 'gruvbox-community/gruvbox'
-    use {'numToStr/Comment.nvim'}
-    use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
+    use { 'numToStr/Comment.nvim' }
+    use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
     use 'nvim-treesitter/nvim-treesitter-context'
     use 'unblevable/quick-scope'
     use 'nvim-lua/plenary.nvim'
     use 'ThePrimeagen/harpoon'
-    use {'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }   use 'nvim-telescope/telescope.nvim'
-    use {"akinsho/toggleterm.nvim", tag = '*', config = function() require("toggleterm").setup() end}
+    use { 'nvim-telescope/telescope-fzf-native.nvim', run =
+    'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
+    use 'nvim-telescope/telescope.nvim'
+    use { "akinsho/toggleterm.nvim", tag = '*', config = function() require("toggleterm").setup() end }
     use 'nvim-tree/nvim-tree.lua'
     use 'nvim-tree/nvim-web-devicons'
     use 'mbbill/undotree'
@@ -20,20 +22,21 @@ return require('packer').startup(function(use)
         branch = 'v2.x',
         requires = {
             -- LSP Support
-            {'neovim/nvim-lspconfig'},             -- Required
-            {                                      -- Optional
-            'williamboman/mason.nvim',
-            run = function()
-                pcall(vim.cmd, 'MasonUpdate')
-            end,
-        },
-        {'williamboman/mason-lspconfig.nvim'}, -- Optional
+            { 'neovim/nvim-lspconfig' }, -- Required
+            {
+                                       -- Optional
+                'williamboman/mason.nvim',
+                run = function()
+                    pcall(vim.cmd, 'MasonUpdate')
+                end,
+            },
+            { 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
-        -- Autocompletion
-        {'hrsh7th/nvim-cmp'},     -- Required
-        {'hrsh7th/cmp-nvim-lsp'}, -- Required
-        {'L3MON4D3/LuaSnip'},     -- Required
+            -- Autocompletion
+            { 'hrsh7th/nvim-cmp' }, -- Required
+            { 'hrsh7th/cmp-nvim-lsp' }, -- Required
+            { 'L3MON4D3/LuaSnip' }, -- Required
+        }
     }
-}
-
+    use { 'RaafatTurki/hex.nvim' }
 end)
