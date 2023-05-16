@@ -7,6 +7,8 @@ alias vim="nvim"
 alias hx="helix"
 alias code="code-insiders"
 
+alias vi="/usr/bin/vim"
+
 # git
 alias gs="git status"
 alias ga="git add ."
