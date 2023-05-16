@@ -19,4 +19,4 @@ set PATH /usr/share/dotnet $PATH
 set PATH /opt/devkitpro/tools/bin $PATH
 
 # cuda
-set PATH /opt/cuda/bin $PATH
+set PATH $PATH /opt/cuda/bin
