@@ -218,8 +218,8 @@ awful.screen.connect_for_each_screen(function(s)
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
             volume_widget{
-                device = 'default',
-                widget_type = 'icon_and_text'
+               device = 'default',
+               widget_type = 'icon_and_text'
             },
             brightness.widget,
             mykeyboardlayout,
@@ -594,6 +594,6 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- }}}
 
 awful.spawn.with_shell("~/.config/awesome/autorun.sh")
-os.execute("redshift -l 60.4143616:5.3182464 &")
+--os.execute("redshift -l 60.4143616:5.3182464 &")
 
 beautiful.useless_gap = 5

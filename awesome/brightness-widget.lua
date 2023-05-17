@@ -10,7 +10,7 @@ Brightness.__index = Brightness
 config = awful.util.getdir("config")
 
 function Brightness:isXBacklightInstalled()
-	local prog = io.popen("xbacklight")
+	local prog = io.popen("light")
 	prog:read('*all')
 	local result = {prog:close()}
 
@@ -28,16 +28,16 @@ function Brightness:new(args)
 	local obj = setmetatable({}, Brightness)
 
 	obj.step = args.step or 5
-	obj.cmd = args.cmd or "xbacklight"
-	obj.inc = args.inc or "-inc"
-	obj.dec = args.dec or "-dec"
-	obj.set = args.set or "-set"
-	obj.get = args.get or "-get"
+	obj.cmd = args.cmd or "light"
+	obj.inc = args.inc or "-A"
+	obj.dec = args.dec or "-U"
+	obj.set = args.set or "-S"
+	obj.get = args.get or "-G"
 
 	-- Create imagebox widget
 	obj.widget = wibox.widget.imagebox()
 	obj.widget:set_resize(false)
-	obj.widget:set_image(config.."/awesome.brightness-widget/icons/4.png")
+	obj.widget:set_image(config.."/brightness.svg")
 
 	-- Add a tooltip to the imagebox
 	obj.tooltip = awful.tooltip({ objects = { K },
