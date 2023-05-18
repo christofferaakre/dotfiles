@@ -39,4 +39,5 @@ return require('packer').startup(function(use)
         }
     }
     use { 'RaafatTurki/hex.nvim' }
+    use { 'folke/neoconf.nvim' }
 end)

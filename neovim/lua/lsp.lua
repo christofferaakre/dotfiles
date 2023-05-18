@@ -1,3 +1,6 @@
+-- neoconf setup
+require("neoconf").setup({})
+
 local lsp = require('lsp-zero').preset({})
 local lspconfig = require'lspconfig'
 
