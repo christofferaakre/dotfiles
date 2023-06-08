@@ -75,7 +75,15 @@ local opts = {
             vim.keymap.set("n", "<Leader>ca", rt.code_action_group.code_action_group, { buffer = bufnr })
             vim.keymap.set("n", "<Leader>t", rt.open_cargo_toml.open_cargo_toml)
         end,
+        settings = {
+            ['rust-analyzer'] = {
+                check = {
+                    command = "clippy"
+                }
+            }
+        },
     },
+
     dap = {
         adapter = require('rust-tools.dap').get_codelldb_adapter(
             codelldb_path, liblldb_path)
