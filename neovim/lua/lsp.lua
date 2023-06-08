@@ -77,6 +77,11 @@ local opts = {
         end,
         settings = {
             ['rust-analyzer'] = {
+                diagnostics = {
+                    disabled = {
+                        "inactive-code"
+                    }
+                },
                 check = {
                     command = "clippy"
                 }
