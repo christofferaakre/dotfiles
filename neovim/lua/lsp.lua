@@ -3,6 +3,7 @@ require("neoconf").setup({})
 
 local lsp = require('lsp-zero').preset({})
 local lspconfig = require 'lspconfig'
+local configs = require("lspconfig.configs")
 
 lsp.on_attach(function(client, bufnr)
     lsp.default_keymaps({ buffer = bufnr })
@@ -34,9 +35,9 @@ lsp.setup_nvim_cmp({
 
 })
 
-lsp.on_attach(function(client, bufnr)
+local function on_attach(client, bufnr)
     local opts = { buffer = bufnr, remap = false }
-
+    vim.keymap.set("n", "K", vim.lsp.buf.hover, { buffer = bufnr})
     vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
     vim.keymap.set("n", "<leader>vws", function() vim.lsp.buf.workspace_symbol() end, opts)
     vim.keymap.set("n", "<leader>e", function() vim.diagnostic.open_float() end, opts)
@@ -45,8 +46,9 @@ lsp.on_attach(function(client, bufnr)
     vim.keymap.set("n", "gr", function() vim.lsp.buf.references() end, opts)
     vim.keymap.set("n", "<leader>rn", function() vim.lsp.buf.rename() end, opts)
     vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
-end)
+end
 
+lsp.on_attach(on_attach)
 
 lsp.setup()
 
@@ -96,3 +98,18 @@ local opts = {
 }
 
 rt.setup(opts)
+
+if not configs.wgsl_analyzer then
+    configs.wgsl_analyzer = {
+        default_config = {
+            cmd = { "wgsl_analyzer" },
+            filetypes = { "wgsl" },
+            root_dir =lspconfig.util.root_pattern(".git", "wgsl"),
+            settings = {}
+        },
+    }
+end
+
+lspconfig.wgsl_analyzer.setup({
+    on_attach = on_attach,
+})
