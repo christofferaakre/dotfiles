@@ -45,4 +45,5 @@ return require('packer').startup(function(use)
     use 'mfussenegger/nvim-dap'
     use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
     use 'theHamsta/nvim-dap-virtual-text'
+    use 'nvim-telescope/telescope-symbols.nvim'
 end)
