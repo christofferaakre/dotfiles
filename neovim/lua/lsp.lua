@@ -1,6 +1,14 @@
 -- neoconf setup
 require("neoconf").setup({})
 
+local ignored_projects = {'pokeemerald'}
+local cwd = vim.loop.cwd()
+local disable_lsp = false
+for _, project in ipairs(ignored_projects) do
+    disable_lsp = disable_lsp or string.find(cwd, project)
+end
+
+if not disable_lsp then
 local lsp = require('lsp-zero').preset({})
 local lspconfig = require 'lspconfig'
 local configs = require("lspconfig.configs")
@@ -12,13 +20,12 @@ end)
 lsp.ensure_installed({
     'pyright',
     'tsserver',
-    'clangd',
     'bashls',
     'cmake',
     'cssls',
     'eslint',
     'html',
-    'lua_ls',
+--    'lua_ls',
 })
 
 local cmp = require('cmp')
@@ -113,3 +120,4 @@ end
 lspconfig.wgsl_analyzer.setup({
     on_attach = on_attach,
 })
+end -- endif not disable_lsp

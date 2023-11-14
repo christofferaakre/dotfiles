@@ -746,6 +746,12 @@ font:
 # If the same trigger is assigned to multiple actions, all of them are executed
 # in the order they were defined in.
 #key_bindings:
+key_bindings:
+  - {key: F5, mods: Control|Shift, chars: "\x1b[15;6;5~"}
+  - {key: F5, mods: Control, chars: "\x1b[>15;5~"}
+  - {key: F5, mods: Shift, chars: "\x1b[15;4~"}
+  - {key: F5, mods: Alt, chars: "\x1b[15;6~"}
+  - {key: F11,mods: Shift,chars: "\x1b[23;2~"}
   #- { key: Paste,                                       action: Paste          }
   #- { key: Copy,                                        action: Copy           }
   #- { key: L,         mods: Control,                    action: ClearLogNotice }
@@ -876,3 +882,4 @@ font:
 
   # Print all received window events.
   #print_events: false
+  #

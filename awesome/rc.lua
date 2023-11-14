@@ -514,6 +514,7 @@ awful.rules.rules = {
           "Hello world",
           "glutin",
           "Emoji Picker",
+          "Qalculate!",
         },
         role = {
           "AlarmWindow",  -- Thunderbird's calendar.

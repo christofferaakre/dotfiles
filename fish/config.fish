@@ -8,3 +8,5 @@ and not set -q TMUX
 end
 
 end
+
+thefuck --alias | source
