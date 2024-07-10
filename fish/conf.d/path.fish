@@ -15,8 +15,5 @@ set PATH /opt/devkitpro/tools/bin $PATH
 # cuda
 set PATH /opt/cuda/bin $PATH
 
-# setting PATH
-set PATH /home/negosaki/.local/bin $PATH
-set PATH /home/negosaki/opt/cross/bin $PATH
-set PATH /opt $PATH
-set PATH /home/negosaki/bin $PATH
+# ffmpeg
+ set PATH "/cygdrive/c/Program\ Files/ffmpeg/ffmpeg-2023-05-22-git-877ccaf776-full_build/bin/" $PATH

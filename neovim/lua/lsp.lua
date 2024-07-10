@@ -59,6 +59,12 @@ lsp.on_attach(on_attach)
 
 lsp.setup()
 
+require'lspconfig'.powershell_es.setup{
+  bundle_path = 'D:\\Documents\\PowerShellEditorServices',
+  shell = "powershell.exe",
+  settings = { powershell = { codeFormatting = { Preset = 'OTBS' } } }
+}
+
 local rt = require("rust-tools")
 
 local extension_path = vim.env.HOME .. '/.vscode/extensions/vadimcn.vscode-lldb-1.9.2/'

@@ -13,9 +13,9 @@ return require('packer').startup(function(use)
     'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
     use 'nvim-telescope/telescope.nvim'
     use { "akinsho/toggleterm.nvim", tag = '*', config = function() require("toggleterm").setup() end }
-    use 'nvim-tree/nvim-tree.lua'
-    use 'nvim-tree/nvim-web-devicons'
-    use 'mbbill/undotree'
+    --use 'nvim-tree/nvim-tree.lua'
+    --use 'nvim-tree/nvim-web-devicons'
+    --use 'mbbill/undotree'
     use 'tpope/vim-fugitive'
     use {
         'VonHeikemen/lsp-zero.nvim',
