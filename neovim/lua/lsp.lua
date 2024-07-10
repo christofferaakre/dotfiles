@@ -80,3 +80,9 @@ local opts = {
 }
 
 rt.setup(opts)
+
+require'lspconfig'.powershell_es.setup{
+  bundle_path = 'D:\\Documents\\PowerShellEditorServices',
+  shell = "powershell.exe",
+  settings = { powershell = { codeFormatting = { Preset = 'OTBS' } } }
+}
