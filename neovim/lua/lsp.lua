@@ -120,4 +120,6 @@ end
 lspconfig.wgsl_analyzer.setup({
     on_attach = on_attach,
 })
+
+lspconfig.gdscript.setup{}
 end -- endif not disable_lsp

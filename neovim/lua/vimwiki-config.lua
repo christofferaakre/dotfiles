@@ -1,7 +1,7 @@
 vim.g.vimwiki_list =
 {
     {
-        path = "~/dnd/arath/",
+        path = "~/dnd/zephyria/",
         template_path = "~/vimwiki_templates/",
         template_default = "main_template",
         template_ext = ".html"
