@@ -18,8 +18,7 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 local volume_widget = require('awesome-wm-widgets.volume-widget.volume')
 
 local brightness_widget = require('brightness-widget')
-local brightness = brightness_widget:new({})
-
+local brightness = brightness_widget:new({ })
 
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
@@ -220,7 +219,7 @@ awful.screen.connect_for_each_screen(function(s)
             volume_widget{
               widget_type = 'icon_and_text'
             },
- --           brightness.widget,
+            brightness.widget,
             mykeyboardlayout,
             require("battery-widget") {},
             wibox.widget.systray(),
