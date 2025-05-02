@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+pacman -S yay --noconfirm
+pacman -S gcc --noconfirm
+pacman -S git --noconfirm
+pacman -S make --noconfirm
+pacman -S cmake --noconfirm
+pacman -S base-devel ninja curl
+pacman -S pkg-config --noconfirm
+pacman -S awesome --noconfirm
+pacman -S fish --noconfirm
+pacman -S tmux --noconfirm
+pacman -S starship thefuck --noconfirm
+pacman -S fzf --noconfirm
+pacman -S vim alacritty --no-confirm
+
+cargo install sccache
+cargo install exa
+cargo install fd-find
+cargo install ripgrep
+cargo install dust
+
+ln -sf "$(pwd)/awesome" $HOME/.config/awesome
+ln -sf "$(pwd)/alacritty" $HOME/.config/alacritty
+ln -sf "$(pwd)/neovim" $HOME/.config/nvim
+ln -sf "$(pwd)/fish" $HOME/.config/fish
+ln -sf "$(pwd)/tmux/.tmux.conf" $HOME/.tmux.conf
+ln -sf "$(pwd)/starship.toml" $HOME/.config/starship.toml

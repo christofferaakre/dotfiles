@@ -19,7 +19,6 @@ end)
 
 lsp.ensure_installed({
     'pyright',
-    'tsserver',
     'bashls',
     'cmake',
     'cssls',

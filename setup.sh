@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-ln -s "$(pwd)/awesome" ~/.config/awesome
-ln -s "$(pwd)/alacritty" ~/.config/alacritty
-ln -s "$(pwd)/neovim" ~/.config/nvim
-ln -s "$(pwd)/fish" ~/.config/fish
-ln -s "$(pwd)/tmux/.tmux.conf" ~/.tmux.conf
-ln -s "$(pwd)/starship.toml" ~/.config/starship.toml
+ln -sf "$(pwd)/awesome" $HOME/.config/awesome
+ln -sf "$(pwd)/alacritty" $HOME/.config/alacritty
+ln -sf "$(pwd)/neovim" $HOME/.config/nvim
+ln -sf "$(pwd)/fish" $HOME/.config/fish
+ln -sf "$(pwd)/tmux/.tmux.conf" $HOME/.tmux.conf
+ln -sf "$(pwd)/starship.toml" $HOME/.config/starship.toml

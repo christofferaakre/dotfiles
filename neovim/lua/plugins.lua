@@ -9,8 +9,7 @@ return require('packer').startup(function(use)
     use 'unblevable/quick-scope'
     use 'nvim-lua/plenary.nvim'
     use 'ThePrimeagen/harpoon'
-    use { 'nvim-telescope/telescope-fzf-native.nvim', run =
-    'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
+    use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
     use 'nvim-telescope/telescope.nvim'
     use { "akinsho/toggleterm.nvim", tag = '*', config = function() require("toggleterm").setup() end }
     use 'nvim-tree/nvim-tree.lua'
@@ -43,7 +42,13 @@ return require('packer').startup(function(use)
 
     use 'simrat39/rust-tools.nvim'
     use 'mfussenegger/nvim-dap'
-    use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
+    use { 
+        "rcarriga/nvim-dap-ui", 
+         requires = { 
+            "mfussenegger/nvim-dap" ,
+            "nvim-neotest/nvim-nio"
+        } 
+    }
     use 'theHamsta/nvim-dap-virtual-text'
     use 'vimwiki/vimwiki'
     use 'nvim-telescope/telescope-symbols.nvim'
