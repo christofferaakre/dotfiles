@@ -59,6 +59,18 @@ terminal = "alacritty"
 editor = os.getenv("EDITOR") or "nano"
 editor_cmd = terminal .. " -e " .. editor
 
+local path = os.getenv("HOME") .. "/.browser"
+local file = io.open(path, "r")
+
+browser = "firefox"
+
+if file then
+  browser = file:read("*a")
+  file:close()
+else
+  browser = "firefox"
+end
+
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
 -- If you do not like this or do not have such a key,
@@ -349,8 +361,8 @@ globalkeys = gears.table.join(
               end,
               {description = "lua execute prompt", group = "awesome"}),
 
-    -- chromium
-    awful.key({ modkey }, "a", function() awful.spawn("chromium-browser") end,
+    -- browser
+    awful.key({ modkey }, "a", function() awful.spawn(browser) end,
     {description = "launch browser", group = "launcher"}),
 
     -- flameshot
