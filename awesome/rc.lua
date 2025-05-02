@@ -23,7 +23,7 @@ local brightness = brightness_widget:new({})
 
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
-require("awful.hotkeys_popup.keys")
+--require("awful.hotkeys_popup.keys")
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -218,10 +218,9 @@ awful.screen.connect_for_each_screen(function(s)
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
             volume_widget{
-               device = 'default',
-               widget_type = 'icon_and_text'
+              widget_type = 'icon_and_text'
             },
-            brightness.widget,
+ --           brightness.widget,
             mykeyboardlayout,
             require("battery-widget") {},
             wibox.widget.systray(),
@@ -351,7 +350,7 @@ globalkeys = gears.table.join(
               {description = "lua execute prompt", group = "awesome"}),
 
     -- chromium
-    awful.key({ modkey }, "a", function() awful.spawn("chromium") end,
+    awful.key({ modkey }, "a", function() awful.spawn("chromium-browser") end,
     {description = "launch browser", group = "launcher"}),
 
     -- flameshot

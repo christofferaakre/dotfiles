@@ -4,10 +4,11 @@ SETUVAR --export --path LD_LIBRARY_PATH:/home/negosaki/vizrt\x2dstuff/repos/clip
 SETUVAR --export VCP_BUILD_LOG:/tmp/clip\x2dplayer\x2d2\x2elog
 SETUVAR --export VCP_PRESET:release
 SETUVAR --export VCP_ROOT:/home/negosaki/vizrt\x2dstuff/repos/clip\x2dplayer\x2d2
-SETUVAR __fish_initialized:3400
+SETUVAR __fish_initialized:3100
 SETUVAR _fisher_edc_2F_bass_files:\x7e/\x2econfig/fish/functions/__bass\x2epy\x1e\x7e/\x2econfig/fish/functions/bass\x2efish
 SETUVAR _fisher_jorgebucaran_2F_fisher_files:\x7e/\x2econfig/fish/functions/fisher\x2efish\x1e\x7e/\x2econfig/fish/completions/fisher\x2efish
-SETUVAR _fisher_plugins:jorgebucaran/fisher\x1eedc/bass
+SETUVAR _fisher_jorgebucaran_2F_nvm_2E_fish_files:\x7e/\x2econfig/fish/functions/_nvm_index_update\x2efish\x1e\x7e/\x2econfig/fish/functions/_nvm_list\x2efish\x1e\x7e/\x2econfig/fish/functions/_nvm_version_activate\x2efish\x1e\x7e/\x2econfig/fish/functions/_nvm_version_deactivate\x2efish\x1e\x7e/\x2econfig/fish/functions/nvm\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/nvm\x2efish\x1e\x7e/\x2econfig/fish/completions/nvm\x2efish
+SETUVAR _fisher_plugins:jorgebucaran/fisher\x1eedc/bass\x1ejorgebucaran/nvm\x2efish
 SETUVAR _fisher_upgraded_to_4_4:\x1d
 SETUVAR fish_color_autosuggestion:585858
 SETUVAR fish_color_cancel:\x2d\x2dreverse

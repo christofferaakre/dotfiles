@@ -1,0 +1,51 @@
+[font]
+size = 16
+
+[font.bold]
+family = "Hack Nerd Font Mono"
+style = "Bold"
+
+[font.bold_italic]
+family = "Hack Nerd Font Mono"
+style = "Bold Italic"
+
+[font.italic]
+family = "Hack Nerd Font Mono"
+style = "Italic"
+
+[font.normal]
+family = "Hack Nerd Font Mono"
+style = "Regular"
+
+[[keyboard.bindings]]
+chars = "\u001B[15;6;5~"
+key = "F5"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+chars = "\u001B[>15;5~"
+key = "F5"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u001B[15;4~"
+key = "F5"
+mods = "Shift"
+
+[[keyboard.bindings]]
+chars = "\u001B[15;6~"
+key = "F5"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u001B[23;2~"
+key = "F11"
+mods = "Shift"
+
+[window]
+decorations = "full"
+opacity = 1.0
+
+[window.padding]
+x = 5
+y = 0

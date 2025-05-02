@@ -10,3 +10,5 @@ end
 end
 
 thefuck --alias | source
+
+nvm use latest > /dev/null
