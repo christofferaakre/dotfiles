@@ -17,15 +17,15 @@ lsp.on_attach(function(client, bufnr)
     lsp.default_keymaps({ buffer = bufnr })
 end)
 
-lsp.ensure_installed({
-    'pyright',
-    'bashls',
-    'cmake',
-    'cssls',
-    'eslint',
-    'html',
---    'lua_ls',
-})
+--lsp.ensure_installed({
+--    'pyright',
+--    'bashls',
+--    'cmake',
+--    'cssls',
+--    'eslint',
+--    'html',
+----    'lua_ls',
+--})
 
 local cmp = require('cmp')
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
