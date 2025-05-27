@@ -21,4 +21,6 @@ alias gd="git diff"
 # awesome
 alias arc="vim ~/.config/awesome/rc.lua"
 
+alias ls="eza"
+
 # coreutil replacements
