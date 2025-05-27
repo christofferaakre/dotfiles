@@ -1,10 +1,9 @@
-alias aliases="vim ~/dotfiles/fish/conf.d/aliases.fish"
+alias aliases="vim ~/dotfiles/fish/conf.d/aliases.fish && source ~/dotfiles/fish/conf.d/aliases.fish"
 
 alias dotfiles="cd ~/dotfiles"
 
 # editor
 alias vim="nvim"
-alias hx="helix"
 alias code="code-insiders"
 
 alias vi="/usr/bin/vim"
@@ -23,4 +22,3 @@ alias gd="git diff"
 alias arc="vim ~/.config/awesome/rc.lua"
 
 # coreutil replacements
-alias ls="exa"
