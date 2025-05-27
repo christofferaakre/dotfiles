@@ -1,17 +1,16 @@
-require("config.lazy")
-
 -- set python3 path
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-vim.g["python3_host_prog"] = "~/.local/venv/nvim/bin/python3"
+--vim.g.loaded_netrw = 1
+--vim.g.loaded_netrwPlugin = 1
 
-require("config.colors")
+--vim.g["python3_host_prog"] = "~/.local/venv/nvim/bin/python3"
 
 -- global variables
-require("config/globals")
-require("config/sets")
+--require("globals")
+
+--require("sets")
 --require("plugins")
-require("config/keybindings")
+--require("colors")
+--require("keybindings")
 --require("undotree-config")
 --require("fugitive-config")
 --require("harpoon-config")
@@ -19,13 +18,11 @@ require("config/keybindings")
 --require("toggleterm-config")
 --require("treesitter")
 --require("nvim-tree-config")
-require("config/lsp")
+--require("lsp")
 --require("dap-config")
-require("config/syntax_highlighting")
+--require("syntax_highlighting")
 --require("comment")
 --require('context')
 --require("hex-config")
 --require("vimwiki-config")
-require("filetypes")
-
-vim.lsp.enable('pyright')
+--require("filetypes")
