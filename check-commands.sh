@@ -27,6 +27,7 @@ REQUIRED_CMDS=(
   signal-desktop
   vi
   nvim
+  fish
 )
 
 # Function to check each command

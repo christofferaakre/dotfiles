@@ -11,3 +11,5 @@ ln -sf "$(pwd)/neovim" $HOME/.config/nvim
 ln -sf "$(pwd)/fish" $HOME/.config/fish
 ln -sf "$(pwd)/tmux/.tmux.conf" $HOME/.tmux.conf
 ln -sf "$(pwd)/starship.toml" $HOME/.config/starship.toml
+
+chsh -s "$(command -v fish)"
