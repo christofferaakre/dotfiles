@@ -25,7 +25,8 @@ REQUIRED_CMDS=(
   discord
   spotify
   signal-desktop
-
+  vi
+  nvim
 )
 
 # Function to check each command

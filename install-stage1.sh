@@ -1,30 +1,43 @@
 #!/usr/bin/env bash
+set -euo pipefail
 
-pacman -S yay --noconfirm
-pacman -S gcc --noconfirm
-pacman -S git --noconfirm
-pacman -S make --noconfirm
-pacman -S cmake --noconfirm
-pacman -S base-devel ninja curl --noconfirm
-pacman -S pkg-config --noconfirm
-pacman -S awesome --noconfirm
-pacman -S fish --noconfirm
-pacman -S tmux --noconfirm
-pacman -S starship thefuck --noconfirm
-pacman -S fzf --noconfirm
-pacman -S vim alacritty --no-confirm
-pacman -S xorg-xinput xorg-xrandr xorg-xmodmap clipmenu --noconfirm
-pacamn -S sxiv --noconfirm
-yay -S light --noconfirm
+sudo pacman -S --noconfirm \
+  yay gcc git make cmake base-devel ninja curl pkg-config \
+  awesome fish tmux starship thefuck fzf vim alacritty \
+  xorg-xinput xorg-xrandr xorg-xmodmap clipmenu sxiv
+
+if ! command -v yay &>/dev/null; then
+  sudo pacman -S --noconfirm yay
+else
+  echo "yay already installed."
+fi
 
 # install rustup
-set -euo pipefail
 if ! command -v rustup &> /dev/null; then
     echo "Installing rustup..."
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 else
     echo "rustup is already installed."
 fi
-export PATH="$HOME/.cargo/bin:$PATH"
+source "$HOME/.cargo/env"
 
+echo "Installing nightly Rust toolchain and setting it as default..."
+rustup install nightly
+rustup default nightly
 
+if ! command -v nvim &>/dev/null; then
+  (
+    git clone https://github.com/neovim/neovim
+    pushd neovim
+    git checkout stable
+    make CMAKE_BUILD_TYPE=Release -j"$(nproc)"
+    sudo make install
+    popd
+  )
+fi
+
+# fail if neovim is not installed
+if ! command -v nvim &> /dev/null; then
+    echo "Neovim installation failed."
+    exit 1
+fi
