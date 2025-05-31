@@ -27,8 +27,11 @@ rustup default nightly
 
 if ! command -v nvim &>/dev/null; then
   (
+    mkdir -p "$HOME/source"
+    pushd "$HOME/source" 
+
     git clone https://github.com/neovim/neovim
-    pushd neovim
+    cd neovim
     git checkout stable
     make CMAKE_BUILD_TYPE=Release -j"$(nproc)"
     sudo make install

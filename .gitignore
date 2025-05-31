@@ -1,6 +1,7 @@
 fish/conf.d/zoxide.fish
 fish/fish_variables
 fish/fish_variables.lock
+fish/fish_variables
 **/*~
 neovim-old/
 neovim/plugin/

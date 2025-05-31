@@ -17,3 +17,4 @@ install_if_missing eza
 install_if_missing fd-find
 install_if_missing ripgrep
 install_if_missing du-dust
+install_if_missing bat

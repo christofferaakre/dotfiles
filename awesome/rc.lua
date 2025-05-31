@@ -17,8 +17,8 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 -- awesome widgets
 local volume_widget = require('awesome-wm-widgets.volume-widget.volume')
 
-local brightness_widget = require('brightness-widget')
-local brightness = brightness_widget:new({ })
+--local brightness_widget = require('brightness-widget')
+--local brightness = brightness_widget:new({ })
 
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
@@ -231,7 +231,7 @@ awful.screen.connect_for_each_screen(function(s)
             volume_widget{
               widget_type = 'icon_and_text'
             },
-            brightness.widget,
+            --brightness.widget,
             mykeyboardlayout,
             require("battery-widget") {},
             wibox.widget.systray(),
@@ -263,8 +263,8 @@ globalkeys = gears.table.join(
     awful.key({ modkey }, "#", function() volume_widget:toggle() end),
 
     -- Brightness control
-    awful.key({modkey, "Shift"}, "[", function() brightness:down() end),
-    awful.key({modkey, "Shift"}, "]", function() brightness:up() end),
+    --awful.key({modkey, "Shift"}, "[", function() brightness:down() end),
+    --awful.key({modkey, "Shift"}, "]", function() brightness:up() end),
 
     awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
               {description="show help", group="awesome"}),
