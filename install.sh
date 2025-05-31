@@ -1,20 +1,4 @@
 #!/usr/bin/env bash
-pacman -S yay --noconfirm
-pacman -S gcc --noconfirm
-pacman -S git --noconfirm
-pacman -S make --noconfirm
-pacman -S cmake --noconfirm
-pacman -S base-devel ninja curl --noconfirm
-pacman -S pkg-config --noconfirm
-pacman -S awesome --noconfirm
-pacman -S fish --noconfirm
-pacman -S tmux --noconfirm
-pacman -S starship thefuck --noconfirm
-pacman -S fzf --noconfirm
-pacman -S vim alacritty --no-confirm
-pacman -S xorg-xinput xorg-xrandr xorg-xmodmap clipmenu --noconfirm
-pacamn -S sxiv --noconfirm
-yay -S light --noconfirm
 
 cargo install sccache
 cargo install exa
@@ -24,6 +8,21 @@ cargo install dust
 
 git clone git@github.com:streetturtle/awesome-wm-widgets.git
 git clone git@github.com:deficient/battery-widget.git
+
+# clone and build neovim stable
+sudo pacman -S base-devel cmake ninja curl
+git clone https://github.com/neovim/neovim
+pushd neovim
+git checkout stable
+make CMAKE_BUILD_TYPE=Release -j$(nproc)
+sudo make install
+
+# fail if neovim is not installed
+if ! command -v nvim &> /dev/null; then
+    echo "Neovim installation failed."
+    exit 1
+fi
+
 
 ln -sf "$(pwd)/awesome" $HOME/.config/awesome
 mkdir -p "$HOME/.local/share/awesome"
