@@ -8,6 +8,6 @@ starship init fish | source
 set fish_greeting
 end
 
-thefuck --alias | source
-
-nvm use latest > /dev/null
+if string match -q "Linux" (uname)
+    nvm use latest > /dev/null
+end
