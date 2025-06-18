@@ -3,7 +3,7 @@ alias aliases="vim ~/dotfiles/fish/conf.d/aliases.fish && source ~/dotfiles/fish
 alias dotfiles="cd ~/dotfiles"
 
 # editor
-alias vim="nvim (cy)"
+alias vim="nvim"
 
 alias code="code-insiders"
 
