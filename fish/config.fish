@@ -4,6 +4,10 @@ and not set -q TMUX
 end
 
 if status is-interactive
+    fish_vi_key_bindings
+end
+
+if status is-interactive
 starship init fish | source
 set fish_greeting
 end
