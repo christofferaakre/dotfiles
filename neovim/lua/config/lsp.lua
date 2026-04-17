@@ -39,4 +39,34 @@ vim.lsp.config.pyright = {
   on_attach = lsp_bindings 
 }
 
+-- nvim-cmp setup
+local cmp = require'cmp'
+
+cmp.setup({
+  mapping = {
+    ['<C-n>'] = cmp.mapping.select_next_item(),
+    ['<C-p>'] = cmp.mapping.select_prev_item(),
+    ['<CR>'] = cmp.mapping.confirm({ select = true }),
+    ['<C-Space>'] = cmp.mapping.complete(),
+  },
+  sources = {
+    { name = 'nvim_lsp' },
+    -- optionally add more like buffer, path, etc.
+  }
+})
+
+-- rustaceanvim and lspconfig setup
+vim.g.rustaceanvim = {
+  server = {
+    on_attach = function(client, bufnr)
+      -- enable completion
+      require('cmp_nvim_lsp').default_capabilities()
+    end,
+  },
+}
+
 vim.lsp.enable('pyright')
+vim.lsp.enable('vue_ls')
+vim.lsp.enable('prettier')
+vim.lsp.enable('eslint')
+vim.lsp.enable('cmake')

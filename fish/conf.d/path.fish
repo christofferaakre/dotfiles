@@ -19,6 +19,8 @@ set PATH /opt/cuda/bin $PATH
 set PATH /home/negosaki/.local/bin $PATH
 set PATH /home/negosaki/opt/cross/bin $PATH
 set PATH /opt $PATH
+set PATH $HOME/opt $PATH
+set PATH $HOME/opt/aseprite $PATH
 set PATH /home/negosaki/bin $PATH
 
 set PATH /opt/riscv64_1/bin/ $PATH

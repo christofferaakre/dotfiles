@@ -21,7 +21,6 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
 
 lsp.setup_nvim_cmp({
     mapping = cmp_mappings
-
 })
 
 end -- endif not disable_lsp
